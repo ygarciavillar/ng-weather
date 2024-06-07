@@ -1,0 +1,65 @@
+:host{
+  padding: 2rem;
+}
+
+.tab-header{
+ display: flex;
+ flex-direction: row;
+ overflow-x: auto;
+ gap: 5px;
+}
+
+.tab-header button {
+  flex-shrink: 0;
+}
+
+button{
+  white-space: nowrap;
+  padding: 10px 15px;
+}
+
+.active{
+  background-color: rgba(0,0,0, .1);
+  border: 2px solid black;
+}
+
+
+.header-label {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.header-label > * {
+  flex: 1;
+}
+
+.text-label{
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.close{
+  position: relative;
+  bottom: 10px;
+  left: 10px;
+}
+
+.close:hover{
+  color: red;
+}
+
+.tab-container {
+  height: 90%;
+  max-width: 100%;
+  border: 1px solid black;
+  padding: 1.5rem;
+
+}
+

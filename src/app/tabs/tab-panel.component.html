@@ -1,0 +1,25 @@
+<div class="tab-header">
+  <ng-container *ngFor="let tab of tabItems$| async; index as i">
+    <button *ngIf="!tab.isDeleted" (click)="selectTab(i)" [class.active]="activeTab === tab">
+      <div class="header-label">
+        <span class="text-label">{{tab.label}}</span>
+        <span *ngIf="tab.isCloseable" class="close" (click)="closeTab($event, i)">&times;</span>
+      </div>
+    </button>
+  </ng-container>
+</div>
+
+  <!-- <button *ngFor="let tab of tabItems$| async; index as i" (click)="selectTab(i)">
+      {{tab.label}}
+      <span *ngIf="tab.isCloseable" class="close" (click)="closeTab($event, i)">&times;</span>
+  </button> -->
+
+
+<div *ngIf="activeTab && !activeTab.isDeleted" class="tab-container">
+    <ng-content></ng-content>
+  <!-- <ng-template #tabsContainer></ng-template> -->
+</div> 
+
+
+
+
